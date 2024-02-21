@@ -1,0 +1,13 @@
+[Unit]
+Description=Ghost Discord Webhook Proxy
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/ghwh-proxy 7120
+User=993
+Restart=always
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target
